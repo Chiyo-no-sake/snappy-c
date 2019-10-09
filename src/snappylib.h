@@ -1,0 +1,1 @@
+'tipo' getSizeFormatted( int size ); //TODO stabilire tipo di ritorno

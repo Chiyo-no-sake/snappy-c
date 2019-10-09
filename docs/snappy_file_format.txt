@@ -1,0 +1,77 @@
+Snappy : utilizza lz77, salva i dati con l'utilizzo di 'TagByte'(tB)
+i TagByte sono dei byte ( 8 bit ) che vengono utilizzati dall'algoritmo per salvare informazioni.
+
+Per prima cosa, gli ultimi due bit del tB indicano il tipo di dato:
+
+  00 = literal
+  01 = 1 byte match
+  10 = 2 byte match
+  11 = 4 byte match
+
+Utilizzo degli altri bit del tB:
+
+---LITERALS--- ( gruppi di caratteri non compressi )
+
+	literal/caratteri, lunghi 0--60 -> 'length-1' nei primi 6 bit, dove con length si intende la lunghezza
+					    dell'insieme di caratteri.
+
+	literal più lunghi --> nei primi 6 bit scrivo 60..63 per indicare che verranno
+				usati i prossimi (da 1 a 4) BYTE per salvare la 
+				length-1. 60 per 1 byte, 61 per due ecc.
+
+	+ letterale non compresso in formato binario (es. 'a')
+
+_______________________________________________________________________
+esempi con literals: 
+	
+	000001 00	|---> i primi sei sono un '2', lo 00 indica un letterale, è un tB e ci saranno poi 2 car:
+	01100001	|---> il carattere 'a'
+	01100010	|---> il carattere 'b'
+________________________________________________________________________
+
+---MATCHES---
+le corrispondenze lunghe 4--11 con offset da 1 a 2047 sono codificate usando 1 tB + 1 Byte.
+ - nei 3 bit 'mediani' viene salvata la length-4
+ - nei primi 3 bit del tB sono salvati i 3 bit più importanti dell'offset.
+ - nel secondo byte vengono salvati i restanti bit dell'offset.
+
+le corrispondenze lunghe 1--64, con offset da 1 a 65535 vengono codificate usando 1 tB + 2 Byte.
+ - La length-1 viene salvata nei primi 6 bit del TagByte, seguita dal codice 10
+ - negli altri due byte viene salvato l'offset in LSB first.
+
+corrispondenze più lunghe di 64 vengono salvate in più corr. da 64 o meno
+____________________________________________________________________
+es. match
+	str: abababa  --> usiamo la stringa 'ab' con offset di 2 e lunghezza 5:
+	 (lunghezza del letterale: 2, offset: 2, lunghezza del match: 5)
+
+	000001 00   ---> tB: 2 literals
+	01100001    ---> a
+	01100010    ---> b
+	000 001 01  ---> tB: first 3 bit of offset + length-4 + 1byte match
+	00000010    ---> ultimi 8 bit dell'offset
+___________________________________________________________________
+
+corrispondenze con offset maggiori:
+
+	un match di 4 byte permette a un offset massimo di (2^32)-1 di essere codificato come con un match di 
+	2 byte ('10' nei codici), mettendo quindi gli stessi dati nelle stesse posizioni, 
+	eccetto che i byte per l'offset sono 4 invece che 2.
+
+
+
+L'intera sequenza di letterali e corrispondeze viene preceduta dalla lunghezza non compressa (max 2^32-1) del file scritta 
+in base 128 (ASHII 0--128), con LSB first. Ogni carattere in base128 viene riportato con 7 bit a cui si aggiunge un ottavo bit che indica 
+se sono presenti altri caratteri (='1') o se il blocco che indica la dimensione del file è terminato.
+
+
+durante la compressione l'algoritmo cerca delle corrispondeze comparando l'hash dei 4 byte correntemente in analisi con delle occorrenze trovate precendentemente nel blocco da 32K. 
+La funzione di hash interpreta i 4 byte come un valore di 32 bit, LSB first, moltiplica per 0x1e35a7bd e shifta buttando il bit più basso.
+La grandezza della tabella di hash è la più piccola potenza di due nel range nel range da 256 a 16384 che è grande almeno quanto la stringa in input.
+
+Se l'algoritmo non trova corrispondenze dopo 32 tentativi, inizia a controllare ogni due posizioni nell'input per i prossimi 32, poi ogni 3 e così via. 
+Quando trova una corrispondenza torna a controllare ogni posizione.
+
+
+
+http://mattmahoney.net/dc/dce.html#Section_526
