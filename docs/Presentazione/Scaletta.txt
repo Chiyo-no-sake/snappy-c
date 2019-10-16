@@ -1,0 +1,7 @@
+1) titolo - I
+..) discorso su snappy - funzionamento in generale - I
+..) lz77 - I
+..) la velocità di snappy + motivo + esempi d'uso in programmi comuni - L
+..) Formato dei dati - L
+..) algoritmo di compressione pensato - L
+6) ottimizzazioni, aspettative e conclusioni - I
