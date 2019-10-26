@@ -1,0 +1,3 @@
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles/Snappy.dir
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles/edit_cache.dir

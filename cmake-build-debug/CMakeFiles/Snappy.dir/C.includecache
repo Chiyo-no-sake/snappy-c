@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c
+snappylib.h
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
+stdio.h
+-
+
