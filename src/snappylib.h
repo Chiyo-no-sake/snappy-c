@@ -1,6 +1,8 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+#include <bits/types/FILE.h>
 
 bool compress(char *, char *);
 
@@ -26,6 +28,12 @@ void fillbuffer0(unsigned char *buffer) {
         *buffer = '\0';
         buffer++;
     }
+}
+
+
+//set *byte to the string passed as *bin_str decimally
+void setbyte(unsigned char *byte, char *bin_str) {
+    *byte = strtol(bin_str, 0, 2);
 }
 
 //Ritorna un buffer contenente i dati da scrivere nel file nel formato varint
@@ -97,7 +105,16 @@ unsigned char *dtobin_lend(unsigned long int val) {
     return out;
 }
 
-//set *byte to the string passed as *bin_str decimally
-void setbyte(unsigned char *byte, char *bin_str) {
-    *byte = strtol(bin_str, 0, 2);
+bool writeToFile(char* buffer, char path[], int buff_lenght){
+
+    FILE *file = fopen(path, "wb");
+
+    if(!ferror(file)){
+        fwrite(buffer, sizeof(char), buff_lenght, file);
+    }else{
+        return false;
+    }
+
+    fclose(file);
+    return true;
 }
