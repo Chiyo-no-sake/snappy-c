@@ -13,6 +13,10 @@ stdlib.h
 -
 string.h
 -
+stdio.h
+-
+bits/types/FILE.h
+-
 
 /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c
 snappylib.h
