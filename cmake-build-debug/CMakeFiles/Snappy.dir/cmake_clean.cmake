@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Snappy.dir/src/snappylib.c.o"
   "CMakeFiles/Snappy.dir/src/test.c.o"
   "Snappy"
   "Snappy.pdb"

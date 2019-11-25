@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c
+snappylib.h
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
+
 /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
 stdbool.h
 -

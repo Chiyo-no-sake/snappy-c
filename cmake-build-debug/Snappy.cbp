@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h">
+			<Option target="Snappy"/>
+		</Unit>
 		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c">
 			<Option target="Snappy"/>
 		</Unit>

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Snappy.dir/src/test.c.o  -o Snappy 
+/usr/bin/cc -g   CMakeFiles/Snappy.dir/src/test.c.o CMakeFiles/Snappy.dir/src/snappylib.c.o  -o Snappy 

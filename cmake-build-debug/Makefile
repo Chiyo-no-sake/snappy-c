@@ -123,6 +123,33 @@ Snappy/fast:
 	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/build
 .PHONY : Snappy/fast
 
+src/snappylib.o: src/snappylib.c.o
+
+.PHONY : src/snappylib.o
+
+# target to build an object file
+src/snappylib.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappylib.c.o
+.PHONY : src/snappylib.c.o
+
+src/snappylib.i: src/snappylib.c.i
+
+.PHONY : src/snappylib.i
+
+# target to preprocess a source file
+src/snappylib.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappylib.c.i
+.PHONY : src/snappylib.c.i
+
+src/snappylib.s: src/snappylib.c.s
+
+.PHONY : src/snappylib.s
+
+# target to generate assembly for a file
+src/snappylib.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappylib.c.s
+.PHONY : src/snappylib.c.s
+
 src/test.o: src/test.c.o
 
 .PHONY : src/test.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Snappy"
 	@echo "... edit_cache"
+	@echo "... src/snappylib.o"
+	@echo "... src/snappylib.i"
+	@echo "... src/snappylib.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
