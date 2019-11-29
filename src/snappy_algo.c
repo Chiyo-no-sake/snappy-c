@@ -1,8 +1,10 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "hicpp-signed-bitwise"
-#include "snappylib.h"
 
-int total_file_size = 0; //TODO NEED TO HAVE EXTERN IN MAIN PROGRAM
+#include "snappy_algo.h"
+#include "utilityfuncs.h"
+
+int total_file_size = 0;
 int last_used_bytes;
 
 //set the passed buffer *byte to the string of '01' passed as *bin_str
@@ -68,15 +70,7 @@ unsigned char *getvarint_bindata(unsigned long size) {
 
 
 unsigned int howmanydigits(unsigned long int val){
-    unsigned int cont=0;
-    unsigned long int res = val;
-
-    while(res > 0){
-        res >>= 1; // NOLINT(hicpp-signed-bitwise)
-        cont++;
-    }
-
-    return cont;
+    return log2_floor((int)val);
 }
 
 
@@ -331,11 +325,19 @@ unsigned char *getmatch_bindata(int offset, int length){
     return out_buffer;
 }
 
-int get_totalfilesize(){
+size_t get_block_size(size_t remaining_input){
+    return (
+            remaining_input<BLOCK_SIZE_v1_1 ?
+            remaining_input :
+            BLOCK_SIZE_v1_1
+    );
+}
+
+size_t get_total_out_size() {
     return total_file_size;
 }
 
-int get_lastusedbytes(){
+size_t get_lastusedbytes(){
     return last_used_bytes;
 }
 

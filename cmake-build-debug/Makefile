@@ -123,59 +123,140 @@ Snappy/fast:
 	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/build
 .PHONY : Snappy/fast
 
-src/snappylib.o: src/snappylib.c.o
+src/avl_tree.o: src/avl_tree.c.o
 
-.PHONY : src/snappylib.o
-
-# target to build an object file
-src/snappylib.c.o:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappylib.c.o
-.PHONY : src/snappylib.c.o
-
-src/snappylib.i: src/snappylib.c.i
-
-.PHONY : src/snappylib.i
-
-# target to preprocess a source file
-src/snappylib.c.i:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappylib.c.i
-.PHONY : src/snappylib.c.i
-
-src/snappylib.s: src/snappylib.c.s
-
-.PHONY : src/snappylib.s
-
-# target to generate assembly for a file
-src/snappylib.c.s:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappylib.c.s
-.PHONY : src/snappylib.c.s
-
-src/test.o: src/test.c.o
-
-.PHONY : src/test.o
+.PHONY : src/avl_tree.o
 
 # target to build an object file
-src/test.c.o:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test.c.o
-.PHONY : src/test.c.o
+src/avl_tree.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/avl_tree.c.o
+.PHONY : src/avl_tree.c.o
 
-src/test.i: src/test.c.i
+src/avl_tree.i: src/avl_tree.c.i
 
-.PHONY : src/test.i
+.PHONY : src/avl_tree.i
 
 # target to preprocess a source file
-src/test.c.i:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test.c.i
-.PHONY : src/test.c.i
+src/avl_tree.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/avl_tree.c.i
+.PHONY : src/avl_tree.c.i
 
-src/test.s: src/test.c.s
+src/avl_tree.s: src/avl_tree.c.s
 
-.PHONY : src/test.s
+.PHONY : src/avl_tree.s
 
 # target to generate assembly for a file
-src/test.c.s:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test.c.s
-.PHONY : src/test.c.s
+src/avl_tree.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/avl_tree.c.s
+.PHONY : src/avl_tree.c.s
+
+src/hashtable.o: src/hashtable.c.o
+
+.PHONY : src/hashtable.o
+
+# target to build an object file
+src/hashtable.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/hashtable.c.o
+.PHONY : src/hashtable.c.o
+
+src/hashtable.i: src/hashtable.c.i
+
+.PHONY : src/hashtable.i
+
+# target to preprocess a source file
+src/hashtable.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/hashtable.c.i
+.PHONY : src/hashtable.c.i
+
+src/hashtable.s: src/hashtable.c.s
+
+.PHONY : src/hashtable.s
+
+# target to generate assembly for a file
+src/hashtable.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/hashtable.c.s
+.PHONY : src/hashtable.c.s
+
+src/snappy_algo.o: src/snappy_algo.c.o
+
+.PHONY : src/snappy_algo.o
+
+# target to build an object file
+src/snappy_algo.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappy_algo.c.o
+.PHONY : src/snappy_algo.c.o
+
+src/snappy_algo.i: src/snappy_algo.c.i
+
+.PHONY : src/snappy_algo.i
+
+# target to preprocess a source file
+src/snappy_algo.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappy_algo.c.i
+.PHONY : src/snappy_algo.c.i
+
+src/snappy_algo.s: src/snappy_algo.c.s
+
+.PHONY : src/snappy_algo.s
+
+# target to generate assembly for a file
+src/snappy_algo.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappy_algo.c.s
+.PHONY : src/snappy_algo.c.s
+
+src/test_avl.o: src/test_avl.c.o
+
+.PHONY : src/test_avl.o
+
+# target to build an object file
+src/test_avl.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_avl.c.o
+.PHONY : src/test_avl.c.o
+
+src/test_avl.i: src/test_avl.c.i
+
+.PHONY : src/test_avl.i
+
+# target to preprocess a source file
+src/test_avl.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_avl.c.i
+.PHONY : src/test_avl.c.i
+
+src/test_avl.s: src/test_avl.c.s
+
+.PHONY : src/test_avl.s
+
+# target to generate assembly for a file
+src/test_avl.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_avl.c.s
+.PHONY : src/test_avl.c.s
+
+src/utilityfuncs.o: src/utilityfuncs.c.o
+
+.PHONY : src/utilityfuncs.o
+
+# target to build an object file
+src/utilityfuncs.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/utilityfuncs.c.o
+.PHONY : src/utilityfuncs.c.o
+
+src/utilityfuncs.i: src/utilityfuncs.c.i
+
+.PHONY : src/utilityfuncs.i
+
+# target to preprocess a source file
+src/utilityfuncs.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/utilityfuncs.c.i
+.PHONY : src/utilityfuncs.c.i
+
+src/utilityfuncs.s: src/utilityfuncs.c.s
+
+.PHONY : src/utilityfuncs.s
+
+# target to generate assembly for a file
+src/utilityfuncs.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/utilityfuncs.c.s
+.PHONY : src/utilityfuncs.c.s
 
 # Help Target
 help:
@@ -186,12 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Snappy"
 	@echo "... edit_cache"
-	@echo "... src/snappylib.o"
-	@echo "... src/snappylib.i"
-	@echo "... src/snappylib.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/avl_tree.o"
+	@echo "... src/avl_tree.i"
+	@echo "... src/avl_tree.s"
+	@echo "... src/hashtable.o"
+	@echo "... src/hashtable.i"
+	@echo "... src/hashtable.s"
+	@echo "... src/snappy_algo.o"
+	@echo "... src/snappy_algo.i"
+	@echo "... src/snappy_algo.s"
+	@echo "... src/test_avl.o"
+	@echo "... src/test_avl.i"
+	@echo "... src/test_avl.s"
+	@echo "... src/utilityfuncs.o"
+	@echo "... src/utilityfuncs.i"
+	@echo "... src/utilityfuncs.s"
 .PHONY : help
 
 

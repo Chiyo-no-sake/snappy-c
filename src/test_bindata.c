@@ -1,8 +1,7 @@
-#include "snappylib.h"
-#include <stdio.h>
+#include "snappy_algo.h"
+#include "hashtable.h"
+#include "utilityfuncs.h"
 
-//#define SIZEFORTEST 1048576 //1MB
-#define BLOCKSIZE 65536
 
 void print_datastream(unsigned char *buffer, int bytecount){
     printf("Data output buffer (%d Bytes) is:\n",bytecount);
@@ -15,7 +14,7 @@ void print_datastream(unsigned char *buffer, int bytecount){
 
 int main() {
     int a=16384;
-    char literal_seq[BLOCKSIZE];
+    char literal_seq[BLOCK_SIZE_v1_1];
 
     unsigned char *data_literal;
     unsigned char *data_match;
@@ -39,31 +38,19 @@ int main() {
     print_datastream(data_literal, literal_used_bytes);
 
 
-        data_match = getmatch_bindata(65000, 120);
-        printf("\nTest for match of length 120 and offset 65000\n");
-        int match_used_bytes = get_lastusedbytes();
-        print_datastream(data_match, get_lastusedbytes());
-
-        /*
-        data_match = getmatch_bindata(65536, 20);
-        printf("\nTest for match of length 20 and offset 65536\n");
-        print_datastream(data_match, get_lastusedbytes());
-
-
-        data_match = getmatch_bindata(32, 20);
-        printf("\nTest for match of length 20 and offset 32\n");
-        int match_used_bytes = get_lastusedbytes();
-        print_datastream(data_match, match_used_bytes);
-        */
+    data_match = getmatch_bindata(65000, 120);
+    printf("\nTest for match of length 120 and offset 65000\n");
+    int match_used_bytes = get_lastusedbytes();
+    print_datastream(data_match, get_lastusedbytes());
 
     printf("\nTest for concatenated data:\n");
 
-    out_buffer = malloc(get_totalfilesize());
+    out_buffer = malloc(get_total_out_size(0));
     memcpy(out_buffer, data_varint, varint_usedbytes);
     memcpy(out_buffer+varint_usedbytes, data_literal, literal_used_bytes);
     memcpy(out_buffer+literal_used_bytes+varint_usedbytes, data_match, match_used_bytes);
 
-    print_datastream(out_buffer, get_totalfilesize());
+    print_datastream(out_buffer, get_total_out_size(0));
 
     return 0;
 }

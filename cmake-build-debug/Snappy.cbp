@@ -78,13 +78,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c">
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.c">
 			<Option target="Snappy"/>
 		</Unit>
-		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h">
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.h">
 			<Option target="Snappy"/>
 		</Unit>
-		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c">
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/hashtable.c">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/hashtable.h">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.c">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.h">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.c">
+			<Option target="Snappy"/>
+		</Unit>
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.h">
 			<Option target="Snappy"/>
 		</Unit>
 		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/CMakeLists.txt">

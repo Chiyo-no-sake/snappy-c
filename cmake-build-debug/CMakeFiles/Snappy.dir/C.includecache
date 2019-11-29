@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c
-snappylib.h
-/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
-
-/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
-stdbool.h
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.h
+stddef.h
 -
-stdlib.h
+sys/types.h
 -
 string.h
 -
-stdio.h
+stdlib.h
 -
-bits/types/FILE.h
--
+utilityfuncs.h
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.h
 
-/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c
-snappylib.h
-/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.h
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c
 stdio.h
+-
+avl_tree.h
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.h
+
+/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.h
+stdlib.h
 -
 

@@ -57,45 +57,90 @@ include CMakeFiles/Snappy.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Snappy.dir/flags.make
 
-CMakeFiles/Snappy.dir/src/test.c.o: CMakeFiles/Snappy.dir/flags.make
-CMakeFiles/Snappy.dir/src/test.c.o: ../src/test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Snappy.dir/src/test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/test.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c
+CMakeFiles/Snappy.dir/src/test_avl.c.o: CMakeFiles/Snappy.dir/flags.make
+CMakeFiles/Snappy.dir/src/test_avl.c.o: ../src/test_avl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Snappy.dir/src/test_avl.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/test_avl.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c
 
-CMakeFiles/Snappy.dir/src/test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c > CMakeFiles/Snappy.dir/src/test.c.i
+CMakeFiles/Snappy.dir/src/test_avl.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/test_avl.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c > CMakeFiles/Snappy.dir/src/test_avl.c.i
 
-CMakeFiles/Snappy.dir/src/test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test.c -o CMakeFiles/Snappy.dir/src/test.c.s
+CMakeFiles/Snappy.dir/src/test_avl.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/test_avl.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c -o CMakeFiles/Snappy.dir/src/test_avl.c.s
 
-CMakeFiles/Snappy.dir/src/snappylib.c.o: CMakeFiles/Snappy.dir/flags.make
-CMakeFiles/Snappy.dir/src/snappylib.c.o: ../src/snappylib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Snappy.dir/src/snappylib.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/snappylib.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c
+CMakeFiles/Snappy.dir/src/snappy_algo.c.o: CMakeFiles/Snappy.dir/flags.make
+CMakeFiles/Snappy.dir/src/snappy_algo.c.o: ../src/snappy_algo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Snappy.dir/src/snappy_algo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/snappy_algo.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.c
 
-CMakeFiles/Snappy.dir/src/snappylib.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/snappylib.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c > CMakeFiles/Snappy.dir/src/snappylib.c.i
+CMakeFiles/Snappy.dir/src/snappy_algo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/snappy_algo.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.c > CMakeFiles/Snappy.dir/src/snappy_algo.c.i
 
-CMakeFiles/Snappy.dir/src/snappylib.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/snappylib.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappylib.c -o CMakeFiles/Snappy.dir/src/snappylib.c.s
+CMakeFiles/Snappy.dir/src/snappy_algo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/snappy_algo.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.c -o CMakeFiles/Snappy.dir/src/snappy_algo.c.s
+
+CMakeFiles/Snappy.dir/src/utilityfuncs.c.o: CMakeFiles/Snappy.dir/flags.make
+CMakeFiles/Snappy.dir/src/utilityfuncs.c.o: ../src/utilityfuncs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Snappy.dir/src/utilityfuncs.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/utilityfuncs.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.c
+
+CMakeFiles/Snappy.dir/src/utilityfuncs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/utilityfuncs.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.c > CMakeFiles/Snappy.dir/src/utilityfuncs.c.i
+
+CMakeFiles/Snappy.dir/src/utilityfuncs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/utilityfuncs.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.c -o CMakeFiles/Snappy.dir/src/utilityfuncs.c.s
+
+CMakeFiles/Snappy.dir/src/hashtable.c.o: CMakeFiles/Snappy.dir/flags.make
+CMakeFiles/Snappy.dir/src/hashtable.c.o: ../src/hashtable.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Snappy.dir/src/hashtable.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/hashtable.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/hashtable.c
+
+CMakeFiles/Snappy.dir/src/hashtable.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/hashtable.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/hashtable.c > CMakeFiles/Snappy.dir/src/hashtable.c.i
+
+CMakeFiles/Snappy.dir/src/hashtable.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/hashtable.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/hashtable.c -o CMakeFiles/Snappy.dir/src/hashtable.c.s
+
+CMakeFiles/Snappy.dir/src/avl_tree.c.o: CMakeFiles/Snappy.dir/flags.make
+CMakeFiles/Snappy.dir/src/avl_tree.c.o: ../src/avl_tree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Snappy.dir/src/avl_tree.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/avl_tree.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.c
+
+CMakeFiles/Snappy.dir/src/avl_tree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/avl_tree.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.c > CMakeFiles/Snappy.dir/src/avl_tree.c.i
+
+CMakeFiles/Snappy.dir/src/avl_tree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/avl_tree.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.c -o CMakeFiles/Snappy.dir/src/avl_tree.c.s
 
 # Object files for target Snappy
 Snappy_OBJECTS = \
-"CMakeFiles/Snappy.dir/src/test.c.o" \
-"CMakeFiles/Snappy.dir/src/snappylib.c.o"
+"CMakeFiles/Snappy.dir/src/test_avl.c.o" \
+"CMakeFiles/Snappy.dir/src/snappy_algo.c.o" \
+"CMakeFiles/Snappy.dir/src/utilityfuncs.c.o" \
+"CMakeFiles/Snappy.dir/src/hashtable.c.o" \
+"CMakeFiles/Snappy.dir/src/avl_tree.c.o"
 
 # External object files for target Snappy
 Snappy_EXTERNAL_OBJECTS =
 
-Snappy: CMakeFiles/Snappy.dir/src/test.c.o
-Snappy: CMakeFiles/Snappy.dir/src/snappylib.c.o
+Snappy: CMakeFiles/Snappy.dir/src/test_avl.c.o
+Snappy: CMakeFiles/Snappy.dir/src/snappy_algo.c.o
+Snappy: CMakeFiles/Snappy.dir/src/utilityfuncs.c.o
+Snappy: CMakeFiles/Snappy.dir/src/hashtable.c.o
+Snappy: CMakeFiles/Snappy.dir/src/avl_tree.c.o
 Snappy: CMakeFiles/Snappy.dir/build.make
 Snappy: CMakeFiles/Snappy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Snappy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Snappy"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Snappy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
