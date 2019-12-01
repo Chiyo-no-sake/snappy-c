@@ -13,7 +13,7 @@ int log2_floor(int x){
     return r;
 }
 
-uint char_seq_to_uint(char s[], uint len){
+uint char_seq_to_uint(unsigned char s[], uint len){
     /*
      * Detailed explaination:
      *  the method tries to convert a sequence of char into a 32 bit unsigned

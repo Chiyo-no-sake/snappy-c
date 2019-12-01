@@ -5,8 +5,8 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(Snappy
         #src/test_bindata.c
-        #src/test_hashmap.c
-        src/test_avl.c
+        src/test_hashmap.c
+        #src/test_avl.c
 
         src/snappy_algo.c
         src/snappy_algo.h

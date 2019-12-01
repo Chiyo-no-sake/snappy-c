@@ -204,32 +204,32 @@ src/snappy_algo.c.s:
 	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/snappy_algo.c.s
 .PHONY : src/snappy_algo.c.s
 
-src/test_avl.o: src/test_avl.c.o
+src/test_hashmap.o: src/test_hashmap.c.o
 
-.PHONY : src/test_avl.o
+.PHONY : src/test_hashmap.o
 
 # target to build an object file
-src/test_avl.c.o:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_avl.c.o
-.PHONY : src/test_avl.c.o
+src/test_hashmap.c.o:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_hashmap.c.o
+.PHONY : src/test_hashmap.c.o
 
-src/test_avl.i: src/test_avl.c.i
+src/test_hashmap.i: src/test_hashmap.c.i
 
-.PHONY : src/test_avl.i
+.PHONY : src/test_hashmap.i
 
 # target to preprocess a source file
-src/test_avl.c.i:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_avl.c.i
-.PHONY : src/test_avl.c.i
+src/test_hashmap.c.i:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_hashmap.c.i
+.PHONY : src/test_hashmap.c.i
 
-src/test_avl.s: src/test_avl.c.s
+src/test_hashmap.s: src/test_hashmap.c.s
 
-.PHONY : src/test_avl.s
+.PHONY : src/test_hashmap.s
 
 # target to generate assembly for a file
-src/test_avl.c.s:
-	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_avl.c.s
-.PHONY : src/test_avl.c.s
+src/test_hashmap.c.s:
+	$(MAKE) -f CMakeFiles/Snappy.dir/build.make CMakeFiles/Snappy.dir/src/test_hashmap.c.s
+.PHONY : src/test_hashmap.c.s
 
 src/utilityfuncs.o: src/utilityfuncs.c.o
 
@@ -276,9 +276,9 @@ help:
 	@echo "... src/snappy_algo.o"
 	@echo "... src/snappy_algo.i"
 	@echo "... src/snappy_algo.s"
-	@echo "... src/test_avl.o"
-	@echo "... src/test_avl.i"
-	@echo "... src/test_avl.s"
+	@echo "... src/test_hashmap.o"
+	@echo "... src/test_hashmap.i"
+	@echo "... src/test_hashmap.s"
 	@echo "... src/utilityfuncs.o"
 	@echo "... src/utilityfuncs.i"
 	@echo "... src/utilityfuncs.s"

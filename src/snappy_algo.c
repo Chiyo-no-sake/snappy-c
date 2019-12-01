@@ -342,7 +342,7 @@ size_t get_lastusedbytes(){
 }
 
 
-//TODO
+//TODO test
 bool write_file(unsigned char* buffer, char *path, int buff_length){
 
     FILE* file = fopen(path, "wb");

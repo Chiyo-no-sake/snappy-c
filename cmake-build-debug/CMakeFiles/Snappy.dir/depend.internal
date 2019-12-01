@@ -14,9 +14,11 @@ CMakeFiles/Snappy.dir/src/snappy_algo.c.o
  /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.c
  /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.h
  /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.h
-CMakeFiles/Snappy.dir/src/test_avl.c.o
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o
  /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/avl_tree.h
- /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c
+ /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/hashtable.h
+ /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.h
+ /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_hashmap.c
  /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.h
 CMakeFiles/Snappy.dir/src/utilityfuncs.c.o
  /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.c

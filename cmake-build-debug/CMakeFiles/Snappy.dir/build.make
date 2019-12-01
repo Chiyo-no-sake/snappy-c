@@ -57,18 +57,18 @@ include CMakeFiles/Snappy.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Snappy.dir/flags.make
 
-CMakeFiles/Snappy.dir/src/test_avl.c.o: CMakeFiles/Snappy.dir/flags.make
-CMakeFiles/Snappy.dir/src/test_avl.c.o: ../src/test_avl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Snappy.dir/src/test_avl.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/test_avl.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: CMakeFiles/Snappy.dir/flags.make
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: ../src/test_hashmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Snappy.dir/src/test_hashmap.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Snappy.dir/src/test_hashmap.c.o   -c /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_hashmap.c
 
-CMakeFiles/Snappy.dir/src/test_avl.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/test_avl.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c > CMakeFiles/Snappy.dir/src/test_avl.c.i
+CMakeFiles/Snappy.dir/src/test_hashmap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Snappy.dir/src/test_hashmap.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_hashmap.c > CMakeFiles/Snappy.dir/src/test_hashmap.c.i
 
-CMakeFiles/Snappy.dir/src/test_avl.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/test_avl.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c -o CMakeFiles/Snappy.dir/src/test_avl.c.s
+CMakeFiles/Snappy.dir/src/test_hashmap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Snappy.dir/src/test_hashmap.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_hashmap.c -o CMakeFiles/Snappy.dir/src/test_hashmap.c.s
 
 CMakeFiles/Snappy.dir/src/snappy_algo.c.o: CMakeFiles/Snappy.dir/flags.make
 CMakeFiles/Snappy.dir/src/snappy_algo.c.o: ../src/snappy_algo.c
@@ -124,7 +124,7 @@ CMakeFiles/Snappy.dir/src/avl_tree.c.s: cmake_force
 
 # Object files for target Snappy
 Snappy_OBJECTS = \
-"CMakeFiles/Snappy.dir/src/test_avl.c.o" \
+"CMakeFiles/Snappy.dir/src/test_hashmap.c.o" \
 "CMakeFiles/Snappy.dir/src/snappy_algo.c.o" \
 "CMakeFiles/Snappy.dir/src/utilityfuncs.c.o" \
 "CMakeFiles/Snappy.dir/src/hashtable.c.o" \
@@ -133,7 +133,7 @@ Snappy_OBJECTS = \
 # External object files for target Snappy
 Snappy_EXTERNAL_OBJECTS =
 
-Snappy: CMakeFiles/Snappy.dir/src/test_avl.c.o
+Snappy: CMakeFiles/Snappy.dir/src/test_hashmap.c.o
 Snappy: CMakeFiles/Snappy.dir/src/snappy_algo.c.o
 Snappy: CMakeFiles/Snappy.dir/src/utilityfuncs.c.o
 Snappy: CMakeFiles/Snappy.dir/src/hashtable.c.o

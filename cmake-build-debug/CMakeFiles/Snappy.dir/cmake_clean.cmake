@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Snappy.dir/src/avl_tree.c.o"
   "CMakeFiles/Snappy.dir/src/hashtable.c.o"
   "CMakeFiles/Snappy.dir/src/snappy_algo.c.o"
-  "CMakeFiles/Snappy.dir/src/test_avl.c.o"
+  "CMakeFiles/Snappy.dir/src/test_hashmap.c.o"
   "CMakeFiles/Snappy.dir/src/utilityfuncs.c.o"
   "Snappy"
   "Snappy.pdb"

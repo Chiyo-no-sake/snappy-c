@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include "avl_tree.h"
 
+#define COUNT 10
+
 void print_tree(avlnode *root) {
     if (root->str == NULL) return;
     print_tree(root->left_child);
@@ -12,6 +14,51 @@ void print_tree(avlnode *root) {
     printf("STR: %-8s, POS: %-3d, OFF: %-3d, HEIGHT:%-3d\n", root->str, root->pos, root->len, root->height);
 
     print_tree(root->right_child);
+}
+
+// Function to print binary tree in 2D
+// It does reverse inorder traversal
+// From geekforgeeks.org just for testing -----------------------------------------------
+void print2DUtil(avlnode *root, int space)
+{
+    // Base case
+    if (root==NULL || root -> str == NULL )
+        return;
+
+    // Increase distance between levels
+    space += COUNT;
+
+    // Process right child first
+    print2DUtil(root->right_child, space);
+
+    // Print current node after space
+    // count
+    printf("\n");
+    for (int i = COUNT; i < space; i++)
+        printf(" ");
+    printf("%s, H=%d\n", root->str, root->height);
+
+    // Process left child
+    print2DUtil(root->left_child, space);
+}
+
+// Wrapper over print2DUtil()
+void print2D(avlnode *root)
+{
+    // Pass initial space count as 0
+    print2DUtil(root, 0);
+}
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+
+void get_test(avlnode* root, char c[]){
+    printf("\n\nfinding element %s:\n", c);
+    avlnode *fnd = get_node(root, c);
+
+    if(fnd)
+        printf("STR=%-6s, H=%d\n", fnd->str, fnd->height);
+    else
+        printf("Not found\n");
 }
 
 int main() {
@@ -36,7 +83,21 @@ int main() {
     tree = avl_addifnotin(tree, "f", 1, 4);
     tree = avl_addifnotin(tree, "f", 1, 4);
 
-    print_tree(tree);
+    print2D(tree);//from geeksforgeeks just to test the tree
+
+    get_test(tree, "4");
+    get_test(tree, "f");
+    get_test(tree, "10");
+
+    tree=clear_tree(tree);
+
+
+    if(tree){
+        print2D(tree);
+    }else{
+        printf("\n\nThe tree is now empty\n");
+    }
+
 
     return 0;
 }

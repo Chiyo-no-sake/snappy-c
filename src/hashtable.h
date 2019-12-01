@@ -9,10 +9,11 @@
 #include <string.h>
 #include "utilityfuncs.h"
 #include "avl_tree.h"
+#include <stdio.h>
 
-typedef struct hash_entry_type{
+typedef struct hash_entry_type {
     avlnode *root_ptr;
-}hash_entry;
+} hash_entry;
 
 /*
 * @param src_size
@@ -38,30 +39,39 @@ size_t calculate_hashmap_size(size_t src_size);
  * @return
  *      the unsigned integer corresponding the index
  */
-uint gethash(char *seq);
+uint gethash(char *seq, size_t hash_size);
+
+//@return true if correctly added,
+// or false if not becasue it was already there
+int hash_addifnotin(hash_entry *hashmap, char *str, uint pos, uint len, size_t hash_size);
 
 /**
- * @param src_size
- *      the size of the block (32K/64K) to compress
- * @return
- *      a pointer to the first element of the map created
+ * @param ht Hash table to be setted up
+ * @param hash_size The size to allocate
  */
-hash_entry* create_hashtable(size_t src_size);
+void setup_hashtable(hash_entry ht[], size_t hash_size);
 
 
-/*TODO:
- * Tries to add an element to the tree given *root
- * ONLY if the element is not already in
- * @param root
- *      The root node of the avl where we want to add
+/*
+ * Tries to add an element to the map and return NULL if it's already present
+ * @param *hashmap
+ *      The hashmap first element ptr
  * @param str
  *      The string of the match
  * @param pos
  *      The position of the match if src file
  * @param len
  *      The length of the matched string
- * @return true if added, false if not because it was already
+ * @return the new first
  */
-int hash_add_ifnotin(hash_entry *hashmap, char *str, uint pos, uint len);
+avlnode *hash_addifnotin_util(avlnode *, char *str, uint pos, uint len, size_t hash_size);
+
+/**
+ * @param ht hash table first element
+ * @param hash_size self-explainatory
+ * @param str_to_search self-expl. too
+ * @return the node found or NULL if not found
+ */
+avlnode* hash_getel(hash_entry *ht, size_t hash_size, char * str_to_search);
 
 #endif //SNAPPY_HASHTABLE_H

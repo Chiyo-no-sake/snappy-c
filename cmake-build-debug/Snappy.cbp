@@ -96,7 +96,7 @@
 		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/snappy_algo.h">
 			<Option target="Snappy"/>
 		</Unit>
-		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_avl.c">
+		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/test_hashmap.c">
 			<Option target="Snappy"/>
 		</Unit>
 		<Unit filename="/home/kalu/Documents/Università/Algoritmi/git/Snappy/src/utilityfuncs.c">

@@ -49,18 +49,37 @@ avlnode *balancenode(avlnode *subroot);
 avlnode *avl_addifnotin(avlnode *tree_root, char str[], uint pos, uint len);
 
 
-/**
+/*
+ *  @param tree_root is the root of the tree to search in (or subtree)
+ *  @param str_to_search is the string from we want to get data
+ *  @return the node found if present, else null
+ */
+avlnode *avl_getel(avlnode *tree_root, char *str_to_search);
+
+/*----------------------------------------------------*/
+/*
  * Rotation functions
  * @param node unbalanced node
  * @return the new root of the given subtree
  */
+
+//right left rotation
 avlnode *avl_rotate_rr(avlnode *node);
 
+//right left rotation
 avlnode *avl_rotate_rl(avlnode *node);
 
+//left left rotation
 avlnode *avl_rotate_ll(avlnode *node);
 
+//left right rotation
 avlnode *avl_rotate_lr(avlnode *node);
+
+/*-------------------------------------------------------*/
+
+//free the memory and clear the tree from the given root, returning the new root
+// aka NULL
+avlnode *clear_tree(avlnode *tree_root);
 
 // return weight of the given node
 int node_weight(avlnode *node);
@@ -68,7 +87,7 @@ int node_weight(avlnode *node);
 // update the height of the given node
 void updateheight(avlnode *node);
 
-
-
+// @return true if the node is in the tree
+int contains(avlnode* root, char str[]);
 
 #endif //SNAPPY_AVL_TREE_H

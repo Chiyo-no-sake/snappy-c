@@ -21,7 +21,7 @@ int log2_floor(int x);
  * @return
  *      the uint corresponding "bitwise" to the char sequence
  */
-uint char_seq_to_uint(char s[], uint len);
+uint char_seq_to_uint(unsigned char s[], uint len);
 
 int max(int n1, int n2);
 

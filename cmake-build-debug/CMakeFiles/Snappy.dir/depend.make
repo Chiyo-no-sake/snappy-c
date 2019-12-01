@@ -14,9 +14,11 @@ CMakeFiles/Snappy.dir/src/snappy_algo.c.o: ../src/snappy_algo.c
 CMakeFiles/Snappy.dir/src/snappy_algo.c.o: ../src/snappy_algo.h
 CMakeFiles/Snappy.dir/src/snappy_algo.c.o: ../src/utilityfuncs.h
 
-CMakeFiles/Snappy.dir/src/test_avl.c.o: ../src/avl_tree.h
-CMakeFiles/Snappy.dir/src/test_avl.c.o: ../src/test_avl.c
-CMakeFiles/Snappy.dir/src/test_avl.c.o: ../src/utilityfuncs.h
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: ../src/avl_tree.h
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: ../src/hashtable.h
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: ../src/snappy_algo.h
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: ../src/test_hashmap.c
+CMakeFiles/Snappy.dir/src/test_hashmap.c.o: ../src/utilityfuncs.h
 
 CMakeFiles/Snappy.dir/src/utilityfuncs.c.o: ../src/utilityfuncs.c
 CMakeFiles/Snappy.dir/src/utilityfuncs.c.o: ../src/utilityfuncs.h
