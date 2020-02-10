@@ -1,1 +1,1 @@
-asd20192020tpg8
+An alternative Google's Snappy Algorithm for compressing files
