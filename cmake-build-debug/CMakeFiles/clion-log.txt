@@ -1,4 +1,0 @@
-/home/kalu/.clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -Hsrc -G "CodeBlocks - Unix Makefiles" /home/kalu/Documents/Università/Algoritmi/git/Snappy
--- Configuring done
--- Generating done
--- Build files have been written to: /home/kalu/Documents/Università/Algoritmi/git/Snappy/cmake-build-debug
