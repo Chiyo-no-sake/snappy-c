@@ -1,3 +1,8 @@
+//
+// Created by Luca Pasini on 11/27/19.
+// Made by : Luca Pasini
+//
+
 #include "snappy_algo.h"
 #include "hashtable.h"
 #include "utilityfuncs.h"
@@ -22,7 +27,7 @@ int main() {
     unsigned char *out_buffer;
 
     printf("Test for VARINT\n");
-    int varint_usedbytes = get_lastusedbytes();
+    int varint_usedbytes = get_lastusedB();
     print_datastream(data_varint, varint_usedbytes);
 
     //testing 1+1 bytes literal OK
@@ -34,23 +39,23 @@ int main() {
 
     data_literal = getliteral_bindata(literal_seq,a);
     printf("\n\nTest for literal length of %d, string is %s \n", a, literal_seq);
-    int literal_used_bytes = get_lastusedbytes();
+    int literal_used_bytes = get_lastusedB();
     print_datastream(data_literal, literal_used_bytes);
 
 
-    data_match = getmatch_bindata(65000, 120);
-    printf("\nTest for match of length 120 and offset 65000\n");
-    int match_used_bytes = get_lastusedbytes();
-    print_datastream(data_match, get_lastusedbytes());
+    data_match = getmatch_bindata(1025, 10);
+    printf("\nTest for match of length 10 and offset 1025\n");
+    int match_used_bytes = get_lastusedB();
+    print_datastream(data_match, get_lastusedB()); //0x9e 0xe8 0xfd
 
     printf("\nTest for concatenated data:\n");
 
-    out_buffer = malloc(get_total_out_size(0));
+    out_buffer = malloc(get_total_out_sz());
     memcpy(out_buffer, data_varint, varint_usedbytes);
     memcpy(out_buffer+varint_usedbytes, data_literal, literal_used_bytes);
     memcpy(out_buffer+literal_used_bytes+varint_usedbytes, data_match, match_used_bytes);
 
-    print_datastream(out_buffer, get_total_out_size(0));
+    print_datastream(out_buffer, get_total_out_sz());
 
     return 0;
 }

@@ -1,19 +1,20 @@
 //
-// Created by kalu on 11/26/19.
+// Created by Luca Pasini on 11/27/19.
+// Made by : Luca Pasini
 //
 
 #include "utilityfuncs.h"
 
-int log2_floor(int x){
-    int n = x;
-    int r;
+inline _ulong log2_floor(_ulong x){
+    _ulong n = x;
+    _ulong r;
     for(r=0;n>0;r++){
         n >>= 1 ;
     }
     return r;
 }
 
-uint char_seq_to_uint(unsigned char s[], uint len){
+_uint char_seq_to_uint(unsigned char s[], _uint len){
     /*
      * Detailed explaination:
      *  the method tries to convert a sequence of char into a 32 bit unsigned
@@ -21,7 +22,7 @@ uint char_seq_to_uint(unsigned char s[], uint len){
      *  this is done by setting 8 bit at a time in the final int.
      *  to make this work we use a mask with the byte setted and shift left of
      *  a number 'i' corresponding the byte we want to set.
-     *  So the last char, will be the first byte of the uint,
+     *  So the last char, will be the first byte of the _uint,
      *  the last-1 char will be the second and so on.
      *
      *  ex.
@@ -32,13 +33,28 @@ uint char_seq_to_uint(unsigned char s[], uint len){
      *      n = n | (0xFF << (8 * 3))
      */
 
-    uint n = 0;
-    for(ushort i = 0; i<len; i++){
-        n = n | ((uint)s[i])<<8*i;
+    _uint n = 0;
+    for(_ushort i = 0; i<len; i++){
+        n = n | ((_uint)s[i])<<(i<<3);
     }
     return n;
 }
 
-int max(int n1, int n2){
-    return n1>n2 ? n1:n2;
+
+
+char *add_char(char *str, _uint initlen, char *c){
+    char *new_str = malloc(initlen+2);
+
+    memcpy(new_str,str,initlen);
+    new_str[initlen] = c[0];
+
+    free(str);
+    return new_str;
+}
+
+inline _size_t file_size(FILE *fp){
+    fseek(fp, 0L, SEEK_END);
+    _size_t toret = ftell(fp);
+    fseek(fp, 0, SEEK_SET);
+    return toret;
 }

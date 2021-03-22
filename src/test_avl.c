@@ -1,9 +1,9 @@
 //
-// Created by kalu on 11/27/19.
+// Created by Luca Pasini on 11/27/19.
+// Made by : Luca Pasini
 //
 
 #include <stdio.h>
-#include "avl_tree.h"
 
 #define COUNT 10
 
@@ -51,9 +51,9 @@ void print2D(avlnode *root)
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
-void get_test(avlnode* root, char c[]){
+void get_test(avlnode* root, char c[], _uint strlen){
     printf("\n\nfinding element %s:\n", c);
-    avlnode *fnd = get_node(root, c);
+    avlnode *fnd = avl_getel(root, c, strlen);
 
     if(fnd)
         printf("STR=%-6s, H=%d\n", fnd->str, fnd->height);
@@ -67,27 +67,27 @@ int main() {
     avlnode *tree = create_avl();
 
 
-    tree = avl_addifnotin(tree, "a", 1, 4);
-    tree = avl_addifnotin(tree, "b", 2, 4);
-    tree = avl_addifnotin(tree, "0", 3, 4);
+    tree = avl_addifnotin(tree, "a", 1, 1);
+    tree = avl_addifnotin(tree, "b", 2, 1);
+    tree = avl_addifnotin(tree, "0", 3, 1);
 
-    tree = avl_addifnotin(tree, "1", 4, 5);
-    tree = avl_addifnotin(tree, "2", 5, 4);
-    tree = avl_addifnotin(tree, "f", 1, 4);
-    tree = avl_addifnotin(tree, "z", 2, 4);
-    tree = avl_addifnotin(tree, "c", 3, 4);
-    tree = avl_addifnotin(tree, "4", 4, 5);
-    tree = avl_addifnotin(tree, "3", 5, 4);
-    tree = avl_addifnotin(tree, "f", 1, 4);
-    tree = avl_addifnotin(tree, "f", 1, 4);
-    tree = avl_addifnotin(tree, "f", 1, 4);
-    tree = avl_addifnotin(tree, "f", 1, 4);
+    tree = avl_addifnotin(tree, "1", 4, 1);
+    tree = avl_addifnotin(tree, "2", 5, 1);
+    tree = avl_addifnotin(tree, "f", 1, 1);
+    tree = avl_addifnotin(tree, "z", 2, 1);
+    tree = avl_addifnotin(tree, "c", 3, 1);
+    tree = avl_addifnotin(tree, "4", 4, 1);
+    tree = avl_addifnotin(tree, "3", 5, 1);
+    tree = avl_addifnotin(tree, "f", 1, 1);
+    tree = avl_addifnotin(tree, "f", 1, 1);
+    tree = avl_addifnotin(tree, "f", 1, 1);
+    tree = avl_addifnotin(tree, "f", 1, 1);
 
     print2D(tree);//from geeksforgeeks just to test the tree
 
-    get_test(tree, "4");
-    get_test(tree, "f");
-    get_test(tree, "10");
+    get_test(tree, "4", 1);
+    get_test(tree, "f",1);
+    get_test(tree, "10",2);
 
     tree=clear_tree(tree);
 

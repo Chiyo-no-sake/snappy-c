@@ -1,19 +1,58 @@
 //
-// Created by kalu on 11/26/19.
+// Created by Luca Pasini on 11/27/19.
+// Made by : Luca Pasini
 //
 
 #ifndef SNAPPY_HASHTABLE_H
 #define SNAPPY_HASHTABLE_H
 
+#ifndef _ulong
+#define _ulong unsigned long
+#endif
+
+#ifndef _uint
+#define _uint unsigned int
+#endif
+
+#ifndef _ushort
+#define _ushort unsigned short
+#endif
+
+#ifndef _size_t
+#define _size_t unsigned long
+#endif
+
 #include <stdlib.h>
 #include <string.h>
-#include "utilityfuncs.h"
-#include "avl_tree.h"
 #include <stdio.h>
+#include "utilityfuncs.h"
+#include "list.h"
 
+//Struct for Linked List usage
+typedef struct hash_entry_list_type {
+    list_node *head;
+} hash_entry_l;
+
+//Struct for closed Hash Table
 typedef struct hash_entry_type {
-    avlnode *root_ptr;
-} hash_entry;
+    _uint pos;
+    _uint len;
+    char *str;
+}hash_entry;
+
+//------------List Methods--------------------
+void hash_addifnotin_l(char *str, _uint pos, _uint strlen, _uint hashcode);
+void setup_hashtable_l();
+list_node* hash_getel_l(char *str_to_search, _uint strlen, _uint hashcode);
+void *clear_table_l();
+
+//------------No Struct Methods----------------
+void hash_add(char *str, _uint pos, _uint strlen, _uint hashcode);
+hash_entry* hash_getel(char *str_to_search, _uint strlen, _uint hashcode);
+void setup_hashtable();
+void clear_hashtable();
+
+//------------Common Methods-----------------
 
 /*
 * @param src_size
@@ -22,7 +61,7 @@ typedef struct hash_entry_type {
 * @return
 *      the size that will have the block
 */
-size_t get_maxcompr_size(size_t src_size);
+_size_t get_maxcompr_size(_size_t src_size);
 
 /*
  * @param src_size
@@ -31,7 +70,7 @@ size_t get_maxcompr_size(size_t src_size);
  * @return
  *      the size that will be used for the hashmap
  */
-size_t calculate_hashmap_size(size_t src_size);
+_size_t calculate_hashmap_size(_size_t src_size);
 
 /**
  * @param seq
@@ -39,39 +78,8 @@ size_t calculate_hashmap_size(size_t src_size);
  * @return
  *      the unsigned integer corresponding the index
  */
-uint gethash(char *seq, size_t hash_size);
+_uint gethash(const char *seq, _uint len);
 
-//@return true if correctly added,
-// or false if not becasue it was already there
-int hash_addifnotin(hash_entry *hashmap, char *str, uint pos, uint len, size_t hash_size);
-
-/**
- * @param ht Hash table to be setted up
- * @param hash_size The size to allocate
- */
-void setup_hashtable(hash_entry ht[], size_t hash_size);
-
-
-/*
- * Tries to add an element to the map and return NULL if it's already present
- * @param *hashmap
- *      The hashmap first element ptr
- * @param str
- *      The string of the match
- * @param pos
- *      The position of the match if src file
- * @param len
- *      The length of the matched string
- * @return the new first
- */
-avlnode *hash_addifnotin_util(avlnode *, char *str, uint pos, uint len, size_t hash_size);
-
-/**
- * @param ht hash table first element
- * @param hash_size self-explainatory
- * @param str_to_search self-expl. too
- * @return the node found or NULL if not found
- */
-avlnode* hash_getel(hash_entry *ht, size_t hash_size, char * str_to_search);
+void set_size(_size_t sz);
 
 #endif //SNAPPY_HASHTABLE_H
